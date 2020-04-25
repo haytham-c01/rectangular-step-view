@@ -17,6 +17,7 @@ class RectangularStepView @JvmOverloads constructor(
 
     companion object{
         private const val DEFAULT_STEPS_COUNT= 3
+        private const val MINIMUM_STEPS_COUNT= 2
         private const val DEFAULT_HEIGHT_WIDTH_RATIO= 0.08f
     }
 
@@ -88,11 +89,11 @@ class RectangularStepView @JvmOverloads constructor(
             strokeWidth= getDimension(
                 R.styleable.RectangularStepView_stepViewStrokeWidth,
                 resources.getDimension(R.dimen.RectangularStepViewStrokeWidth)
-            )
+            ).coerceAtLeast(0f)
             shapePaint.strokeWidth= strokeWidth
 
 
-            stepsCount= getInteger(R.styleable.RectangularStepView_stepsCount, DEFAULT_STEPS_COUNT)
+            stepsCount= getInteger(R.styleable.RectangularStepView_stepsCount, DEFAULT_STEPS_COUNT).coerceAtLeast(MINIMUM_STEPS_COUNT)
             _currentStep= getInteger(R.styleable.RectangularStepView_initialStep, 0).coerceIn(0, stepsCount-1)
 
             heightToWidthRatio= getFloat(R.styleable.RectangularStepView_heightToWidthRatio, DEFAULT_HEIGHT_WIDTH_RATIO).coerceIn(0.01f, 0.2f)
