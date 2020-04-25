@@ -1,3 +1,4 @@
+[![](https://jitpack.io/v/haytham-c01/RectangularStepView.svg)](https://jitpack.io/#haytham-c01/RectangularStepView)
 # Rectangular Step view
 A highly customizeable step view, where you can change
 
