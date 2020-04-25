@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fillViewport="true">
+
+
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".MainActivity"
+    android:padding="24dp"
+    android:gravity="center">
+
+    <com.haytham.coder.stepview.RectangularStepView
+        android:id="@+id/stepView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"/>
+
+    <com.haytham.coder.stepview.RectangularStepView
+        android:id="@+id/stepView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:activeColor="@android:color/holo_red_light"
+        app:borderColor="@android:color/holo_orange_light"
+        android:layout_marginBottom="24dp"/>
+
+
+    <com.haytham.coder.stepview.RectangularStepView
+        android:id="@+id/stepView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:activeColor="@android:color/holo_red_light"
+        app:borderColor="@android:color/holo_orange_light"
+        app:stepsCount="6"
+        app:initialStep="2"
+        app:stepViewStrokeWidth="4dp"
+        android:layout_marginBottom="150dp" />
+
+
+    <com.haytham.coder.stepview.RectangularStepView
+        android:id="@+id/stepView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        app:initialStep="1"
+        app:heightToWidthRatio="0.05"/>
+
+
+    <com.haytham.coder.stepview.RectangularStepView
+        android:id="@+id/stepView5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:activeColor="@android:color/holo_red_light"
+        app:borderColor="@android:color/holo_orange_light"
+        app:stepsCount="6"
+        app:initialStep="2"
+        app:stepViewStrokeWidth="4dp"
+        app:heightToWidthRatio="0.20"
+        android:layout_marginBottom="150dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:clipChildren="false"
+        android:gravity="bottom">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DEC"
+            android:onClick="decrementStep"/>
+
+       <LinearLayout
+           android:layout_width="0dp"
+           android:layout_weight="1"
+           android:layout_height="wrap_content"
+           android:gravity="center"
+           android:orientation="vertical">
+           <EditText
+               android:id="@+id/stepNumberEditText"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:inputType="numberSigned"
+               android:text="4"
+               android:gravity="center"/>
+
+           <Button
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Goto Step"
+               android:onClick="gotoStep"/>
+       </LinearLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="INC"
+            android:onClick="incrementStep"/>
+    </LinearLayout>
+
+</LinearLayout>
+</ScrollView>

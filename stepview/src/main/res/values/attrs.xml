@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="RectangularStepView">
+        <attr name="borderColor" format="color" />
+        <attr name="activeColor" format="color" />
+        <attr name="stepViewStrokeWidth" format="dimension" />
+        <attr name="stepsCount" format="integer" />
+        <attr name="initialStep" format="integer" />
+        <attr name="heightToWidthRatio" format="float"/>
+    </declare-styleable>
+</resources>

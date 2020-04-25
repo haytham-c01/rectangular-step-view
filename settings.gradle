@@ -1,0 +1,3 @@
+rootProject.name='Rectangular Step View'
+include ':app'
+include ':stepview'
